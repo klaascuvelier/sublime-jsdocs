@@ -15,7 +15,7 @@
     ]
   },
   // add line after, in a DocBlock
-  { "keys": ["super+enter"], "command": "run_macro_file", "args": {"file": "Packages/DocBlockr/Add DocBlockr Line.sublime-macro"},
+  { "keys": ["super+enter"], "command": "run_macro_file", "args": {"file": "Packages/sublime-jsdocs/Add DocBlockr Line.sublime-macro"},
     "context": [
       { "key": "setting.auto_indent",   "operator": "equal",          "operand": true,            "match_all": true },
       { "key": "selector",              "operator": "equal",          "operand": "comment.block", "match_all": true },
@@ -25,7 +25,7 @@
   },
 
   // add line before, in a DocBlock
-  { "keys": ["super+shift+enter"], "command": "run_macro_file", "args": {"file": "Packages/DocBlockr/Add DocBlockr Line Before.sublime-macro"},
+  { "keys": ["super+shift+enter"], "command": "run_macro_file", "args": {"file": "Packages/sublime-jsdocs/Add DocBlockr Line Before.sublime-macro"},
     "context": [
       { "key": "setting.auto_indent",   "operator": "equal",          "operand": true,            "match_all": true },
       { "key": "selector",              "operator": "equal",          "operand": "comment.block", "match_all": true },
