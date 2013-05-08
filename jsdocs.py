@@ -213,14 +213,16 @@ class JsdocsCommand(sublime_plugin.TextCommand):
 
     def fixTabStops(self, out):
         tabIndex = counter()
+        newOut = list();
 
         def swapTabs(m):
             return "%s%d%s" % (m.group(1), next(tabIndex), m.group(2))
 
-        for index, outputLine in enumerate(out):
-            out[index] = re.sub("(\\$\\{)\\d+(:[^}]+\\})", swapTabs, outputLine)
+        out = list(out)
+        for outputLine in out:
+            newOut.append(re.sub("(\\$\\{)\\d+(:[^}]+\\})", swapTabs, outputLine))
 
-        return out
+        return newOut
 
     def createSnippet(self, out):
         snippet = ""
